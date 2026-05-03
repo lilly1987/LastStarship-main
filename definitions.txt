@@ -104,8 +104,9 @@ END
 
 BEGIN Definition
     Type Scrubber
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True NonBlocking True END
     BEGIN Port Type Pipes      X 0 Y 0 Resource CarbonDioxide Flow Out END
+    BEGIN Port Type Power      X 0 Y 0 END
     BEGIN Port Type Atmosphere X 0 Y 0 END
 
 END
@@ -119,7 +120,7 @@ END
 
 BEGIN Definition
     Type Thruster
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True NonBlocking True END
     BEGIN Port Type Power X 0 Y 0 END
 END
 
@@ -133,7 +134,8 @@ END
 
 BEGIN Definition
     Type FTLDrive
-    BEGIN Equipment Width 1 Height 1 Charge 100 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Charge 100 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
 
 END
@@ -141,6 +143,7 @@ END
 BEGIN Definition
     Type GatlingGun
     BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Slot X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
 END
 
@@ -160,7 +163,8 @@ END
 
 BEGIN Definition
     Type MiningLaser
-    BEGIN Equipment Width 1 Height 1 Rotatable True Charge 30 Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Charge 30 Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
 
 END
 
@@ -179,16 +183,12 @@ END
 
 BEGIN Definition
     Type DroneBay
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
-    BEGIN Slot X 1 Y 0 END
-    BEGIN Slot X 0 Y 2 END
-    BEGIN Slot X 2 Y 2 END
-    BEGIN Slot X 1 Y 2 END
-    BEGIN Slot X 0 Y 1 END
-    BEGIN Slot X 2 Y 1 END
-    BEGIN Slot X 1 Y 1 END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
-    BEGIN Slot X 2 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
 END
 
 BEGIN Definition
@@ -252,7 +252,8 @@ END
 
 BEGIN Definition 
     Type SewageMachine
-    BEGIN Equipment Width 2 Height 1 Rotatable True Powered False Factory True  NonBlocking True END
+    BEGIN Equipment Width 2 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 0 END
     BEGIN Port Type Pipes X 1 Y 0 Resource Sewage Flow In END
     BEGIN Port Type Pipes X 0 Y 0 Resource WasteWater Flow Out END
     BEGIN Slot X 1 Y 0 END
@@ -261,15 +262,17 @@ END
 
 BEGIN Definition 
     Type WaterPurifier
-    BEGIN Equipment Width 2 Height 1 Rotatable True Powered False Factory True  NonBlocking True END
-    BEGIN Port Type Pipes X 0 Y 0 Resource WasteWater Flow In END
-    BEGIN Port Type Pipes X 1 Y 0 Resource Water Flow Out END
+    BEGIN Equipment Width 2 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 0 END
+    BEGIN Port Type Pipes X 1 Y 0 Resource WasteWater Flow In END
+    BEGIN Port Type Pipes X 0 Y 0 Resource Water Flow Out END
 
 END
 
 BEGIN Definition 
     Type AirReprocessor
-    BEGIN Equipment Width 2 Height 1 Rotatable True Powered False Factory True  NonBlocking True END
+    BEGIN Equipment Width 2 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Port Type Pipes X 0 Y 0 Resource CarbonDioxide Flow In END
     BEGIN Port Type Pipes X 1 Y 0 Resource Oxygen Flow Out END
 
@@ -277,7 +280,8 @@ END
 
 BEGIN Definition 
     Type OxygenMaker
-    BEGIN Equipment Width 2 Height 1 Rotatable True Powered False Factory True  NonBlocking True END
+    BEGIN Equipment Width 2 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Port Type Pipes X 1 Y 0 Resource Water Flow In END
     BEGIN Port Type Pipes X 0 Y 0 Resource Oxygen Flow Out END
 
@@ -285,7 +289,8 @@ END
 
 BEGIN Definition 
     Type IceGrinder
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False Factory True  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Port Type Pipes X 0 Y 0 Resource WasteWater Flow Out END
 
@@ -329,9 +334,9 @@ END
 
 BEGIN Definition
     Type HyperspaceCollector
-    BEGIN Equipment Width 1 Height 1 Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Powered True  NonBlocking True END
     BEGIN Port Type Pipes X 0 Y 0 Resource HyperspaceIsotopes Flow Out END
-
+    BEGIN Port Type Power X 0 Y 0 END
 END
 
 BEGIN Definition
@@ -346,75 +351,92 @@ END
 BEGIN Definition
     Type ChemicalLab
     BEGIN Equipment Width 3 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
-    BEGIN Port Type Power X 1 Y 0 END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Port Type Pipes X 0 Y 0 END
     BEGIN Port Type Pipes X 1 Y 0 END
     BEGIN Port Type Pipes X 2 Y 0 END
-    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 1 Y 0 END
     BEGIN Slot X 2 Y 0 END
 
 END
 
 BEGIN Definition
     Type MunitionsFactory
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False Factory True  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Station X 0 Y 0 END
 END
 
 BEGIN Definition
     Type Fabricator
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False Factory True  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
-
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
 END
 
 BEGIN Definition
     Type Assembler
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False Factory True  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Port Type Pipes X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Station X 0 Y 0 END
 END
 
 BEGIN Definition
     Type HyperspaceSensor
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
 END
 
 BEGIN Definition
     Type HyperspaceSensorLR
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
 END
 
 BEGIN Definition
     Type TelepathicSensor
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
 END
 
 BEGIN Definition
     Type Hydroponics
-    BEGIN Equipment Width 3 Height 1 Rotatable True Powered True  NonBlocking True END
-    BEGIN Port Type Power X 1 Y 0 END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Port Type Pipes Resource Water Flow In X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
-    BEGIN Slot X 1 Y 0 END
-    BEGIN Slot X 2 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
 END
 
 BEGIN Definition
     Type RobotArm
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
 END
 
 BEGIN Definition
     Type RobotArmShort
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
 END
 
 BEGIN Definition
     Type RobotArmSmart
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
 END
 
 BEGIN Definition
@@ -430,15 +452,16 @@ END
 
 BEGIN Definition 
     Type ScienceStation
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Station X 0 Y 0 END
 END
 
 BEGIN Definition 
     Type Supercomputer
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
-
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
 END
 
 BEGIN Definition
@@ -450,7 +473,8 @@ END
 
 BEGIN Definition
     Type WeaponsConsole
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Station X 0 Y 0 END
 END
 
@@ -482,13 +506,13 @@ END
 
 BEGIN Definition
     Type SmallTable
-    BEGIN Equipment Width 1 Height 1 NonBlocking True  NonBlocking True END 
+    BEGIN Equipment Width 1 Height 1 NonBlocking True  END 
 
 END
 
 BEGIN Definition
     Type PotPlant
-    BEGIN Equipment Width 1 Height 1 NonBlocking True  NonBlocking True END 
+    BEGIN Equipment Width 1 Height 1 NonBlocking True END 
 
 END
 
@@ -501,8 +525,19 @@ END
 
 BEGIN Definition
     Type FighterBay
-    BEGIN Equipment Width 1 Height 1 WidthOnTop 1 HeightOnTop 1 XOffsetOnTop 0 YOffsetOnTop 0 Rotatable True Crewed True NonBlocking True END
-    BEGIN Port Type Pipes X 0 Y 0 Resource Fuel Flow In NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 WidthOnTop 1 HeightOnTop 1 XOffsetOnTop 0 YOffsetOnTop 0 Rotatable True Powered True NonBlocking True Factory True Crewed True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Port Type Pipes X 0 Y 0 Resource Fuel Flow In END
     BEGIN Slot X 0 Y 0 END
-    BEGIN Station X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Station X 0 Y 1 END
+END
+
+BEGIN Definition
+    Type PowerSwitch
+    BEGIN Equipment Width 1 Height 1 END
+    BEGIN Port Type Power X 0 Y 0 END
 END

@@ -780,7 +780,55 @@ BEGIN Sprite
     BEGIN State      Name Walk4  Orientation UpRight|UpLeft  Flip UpLeft  Frames [19]  END
 END
 
-BEGIN Sprite     
+BEGIN Sprite
+    Name                 CrewMemberWalkingv1
+    Image                orange-crew-female-cycle.png
+    BEGIN Frames
+        Size                 20
+        BEGIN "[i 0]"      X 120  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 1]"      X 240  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 2]"      X 360  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 3]"      X 480  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 4]"      X 120  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 5]"      X 240  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 6]"      X 360  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 7]"      X 480  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 8]"      X 120  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 9]"      X 240  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 10]"     X 360  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 11]"     X 480  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 12]"     X 120  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 13]"     X 240  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 14]"     X 360  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 15]"     X 480  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 16]"     X 120  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 17]"     X 240  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 18]"     X 360  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 19]"     X 480  Y 1080  Width 120  Height 120  ExtendUp 111  END
+    END
+    BEGIN State      Name Walk1  Orientation Down  Frames [0]  END
+    BEGIN State      Name Walk2  Orientation Down  Frames [1]  END
+    BEGIN State      Name Walk3  Orientation Down  Frames [2]  END
+    BEGIN State      Name Walk4  Orientation Down  Frames [3]  END
+    BEGIN State      Name Walk1  Orientation Up  Frames [4]  END
+    BEGIN State      Name Walk2  Orientation Up  Frames [5]  END
+    BEGIN State      Name Walk3  Orientation Up  Frames [6]  END
+    BEGIN State      Name Walk4  Orientation Up  Frames [7]  END
+    BEGIN State      Name Walk1  Orientation Left|Right  Flip Right  Frames [8]  END
+    BEGIN State      Name Walk2  Orientation Left|Right  Flip Right  Frames [9]  END
+    BEGIN State      Name Walk3  Orientation Left|Right  Flip Right  Frames [10]  END
+    BEGIN State      Name Walk4  Orientation Left|Right  Flip Right  Frames [11]  END
+    BEGIN State      Name Walk1  Orientation DownRight|DownLeft  Flip DownRight  Frames [12]  END
+    BEGIN State      Name Walk2  Orientation DownRight|DownLeft  Flip DownRight  Frames [13]  END
+    BEGIN State      Name Walk3  Orientation DownRight|DownLeft  Flip DownRight  Frames [14]  END
+    BEGIN State      Name Walk4  Orientation DownRight|DownLeft  Flip DownRight  Frames [15]  END
+    BEGIN State      Name Walk1  Orientation UpRight|UpLeft  Flip UpLeft  Frames [16]  END
+    BEGIN State      Name Walk2  Orientation UpRight|UpLeft  Flip UpLeft  Frames [17]  END
+    BEGIN State      Name Walk3  Orientation UpRight|UpLeft  Flip UpLeft  Frames [18]  END
+    BEGIN State      Name Walk4  Orientation UpRight|UpLeft  Flip UpLeft  Frames [19]  END
+END
+
+BEGIN Sprite
     Name                 Civilian  
     Image                characters.png  
     BEGIN Frames     
@@ -817,8 +865,8 @@ BEGIN Sprite
 END
 
 BEGIN Sprite     
-    Name                 CivilianWalking  
-    Image                civilian-female-cycle.png  
+    Name                 CivilianWalkingv1
+    Image                civilian-female-cycle.png
     BEGIN Frames     
         Size                 20  
         BEGIN "[i 0]"      X 120  Y 120  Width 120  Height 120  ExtendUp 111  END
@@ -863,6 +911,55 @@ BEGIN Sprite
     BEGIN State      Name Walk3  Orientation UpRight|UpLeft  Flip UpLeft  Frames [18]  END
     BEGIN State      Name Walk4  Orientation UpRight|UpLeft  Flip UpLeft  Frames [19]  END
 END
+
+BEGIN Sprite
+    Name                 CivilianWalking
+    Image                civilian-male-cycle.png
+    BEGIN Frames
+        Size                 20
+        BEGIN "[i 0]"      X 120  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 1]"      X 240  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 2]"      X 360  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 3]"      X 480  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 4]"      X 120  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 5]"      X 240  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 6]"      X 360  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 7]"      X 480  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 8]"      X 120  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 9]"      X 240  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 10]"     X 360  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 11]"     X 480  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 12]"     X 120  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 13]"     X 240  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 14]"     X 360  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 15]"     X 480  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 16]"     X 120  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 17]"     X 240  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 18]"     X 360  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 19]"     X 480  Y 1080  Width 120  Height 120  ExtendUp 111  END
+    END
+    BEGIN State      Name Walk1  Orientation Down  Frames [0]  END
+    BEGIN State      Name Walk2  Orientation Down  Frames [1]  END
+    BEGIN State      Name Walk3  Orientation Down  Frames [2]  END
+    BEGIN State      Name Walk4  Orientation Down  Frames [3]  END
+    BEGIN State      Name Walk1  Orientation Up  Frames [4]  END
+    BEGIN State      Name Walk2  Orientation Up  Frames [5]  END
+    BEGIN State      Name Walk3  Orientation Up  Frames [6]  END
+    BEGIN State      Name Walk4  Orientation Up  Frames [7]  END
+    BEGIN State      Name Walk1  Orientation Left|Right  Flip Right  Frames [8]  END
+    BEGIN State      Name Walk2  Orientation Left|Right  Flip Right  Frames [9]  END
+    BEGIN State      Name Walk3  Orientation Left|Right  Flip Right  Frames [10]  END
+    BEGIN State      Name Walk4  Orientation Left|Right  Flip Right  Frames [11]  END
+    BEGIN State      Name Walk1  Orientation DownRight|DownLeft  Flip DownRight  Frames [12]  END
+    BEGIN State      Name Walk2  Orientation DownRight|DownLeft  Flip DownRight  Frames [13]  END
+    BEGIN State      Name Walk3  Orientation DownRight|DownLeft  Flip DownRight  Frames [14]  END
+    BEGIN State      Name Walk4  Orientation DownRight|DownLeft  Flip DownRight  Frames [15]  END
+    BEGIN State      Name Walk1  Orientation UpRight|UpLeft  Flip UpLeft  Frames [16]  END
+    BEGIN State      Name Walk2  Orientation UpRight|UpLeft  Flip UpLeft  Frames [17]  END
+    BEGIN State      Name Walk3  Orientation UpRight|UpLeft  Flip UpLeft  Frames [18]  END
+    BEGIN State      Name Walk4  Orientation UpRight|UpLeft  Flip UpLeft  Frames [19]  END
+END
+
 
 BEGIN Sprite     
     Name                 Refugee  
@@ -3432,12 +3529,60 @@ BEGIN Sprite
     BEGIN State      Name v1  Orientation Left|Right  Flip Right  Frames [7]  END
     BEGIN State      Name v1  Orientation DownRight|DownLeft  Flip DownRight  Frames [8]  END
     BEGIN State      Name v1  Orientation UpRight|UpLeft  Flip UpLeft  Frames [9]  END
-    BEGIN State      Name Sitting  Orientation Left|Right  Flip Right  Frames [10]  END
-    BEGIN State      Name Sittingv1  Orientation Left|Right  Flip Right  Frames [11]  END
+    BEGIN State      Name Sittingv1  Orientation Left|Right  Flip Right  Frames [10]  END
+    BEGIN State      Name Sitting  Orientation Left|Right  Flip Right  Frames [11]  END
 END
 
 BEGIN Sprite
     Name                 ScientistWalking
+    Image                science-female-cycle.png
+    BEGIN Frames
+        Size                 20
+        BEGIN "[i 0]"      X 120  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 1]"      X 240  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 2]"      X 360  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 3]"      X 480  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 4]"      X 120  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 5]"      X 240  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 6]"      X 360  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 7]"      X 480  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 8]"      X 120  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 9]"      X 240  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 10]"     X 360  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 11]"     X 480  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 12]"     X 120  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 13]"     X 240  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 14]"     X 360  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 15]"     X 480  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 16]"     X 120  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 17]"     X 240  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 18]"     X 360  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 19]"     X 480  Y 1080  Width 120  Height 120  ExtendUp 111  END
+    END
+    BEGIN State      Name Walk1  Orientation Down  Frames [0]  END
+    BEGIN State      Name Walk2  Orientation Down  Frames [1]  END
+    BEGIN State      Name Walk3  Orientation Down  Frames [2]  END
+    BEGIN State      Name Walk4  Orientation Down  Frames [3]  END
+    BEGIN State      Name Walk1  Orientation Up  Frames [4]  END
+    BEGIN State      Name Walk2  Orientation Up  Frames [5]  END
+    BEGIN State      Name Walk3  Orientation Up  Frames [6]  END
+    BEGIN State      Name Walk4  Orientation Up  Frames [7]  END
+    BEGIN State      Name Walk1  Orientation Left|Right  Flip Right  Frames [8]  END
+    BEGIN State      Name Walk2  Orientation Left|Right  Flip Right  Frames [9]  END
+    BEGIN State      Name Walk3  Orientation Left|Right  Flip Right  Frames [10]  END
+    BEGIN State      Name Walk4  Orientation Left|Right  Flip Right  Frames [11]  END
+    BEGIN State      Name Walk1  Orientation DownRight|DownLeft  Flip DownRight  Frames [12]  END
+    BEGIN State      Name Walk2  Orientation DownRight|DownLeft  Flip DownRight  Frames [13]  END
+    BEGIN State      Name Walk3  Orientation DownRight|DownLeft  Flip DownRight  Frames [14]  END
+    BEGIN State      Name Walk4  Orientation DownRight|DownLeft  Flip DownRight  Frames [15]  END
+    BEGIN State      Name Walk1  Orientation UpRight|UpLeft  Flip UpLeft  Frames [16]  END
+    BEGIN State      Name Walk2  Orientation UpRight|UpLeft  Flip UpLeft  Frames [17]  END
+    BEGIN State      Name Walk3  Orientation UpRight|UpLeft  Flip UpLeft  Frames [18]  END
+    BEGIN State      Name Walk4  Orientation UpRight|UpLeft  Flip UpLeft  Frames [19]  END
+END
+
+BEGIN Sprite
+    Name                 ScientistWalkingv1
     Image                science-male-cycle.png
     BEGIN Frames
         Size                 20
@@ -4041,13 +4186,61 @@ BEGIN Sprite
     BEGIN State      Name v1  Orientation Left|Right  Flip Right  Frames [7]  END
     BEGIN State      Name v1  Orientation DownRight|DownLeft  Flip DownRight  Frames [8]  END
     BEGIN State      Name v1  Orientation UpRight|UpLeft  Flip UpLeft  Frames [9]  END
-    BEGIN State      Name Sitting  Orientation Left|Right  Flip Right  Frames [10]  END
-    BEGIN State      Name Sittingv1  Orientation Left|Right  Flip Right  Frames [11]  END
+    BEGIN State      Name Sittingv1  Orientation Left|Right  Flip Right  Frames [10]  END
+    BEGIN State      Name Sitting  Orientation Left|Right  Flip Right  Frames [11]  END
 END
 
 BEGIN Sprite
     Name                 WeaponsSpecialistWalking
     Image                gunner-female-cycle.png
+    BEGIN Frames
+        Size                 20
+        BEGIN "[i 0]"      X 120  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 1]"      X 240  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 2]"      X 360  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 3]"      X 480  Y 120  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 4]"      X 120  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 5]"      X 240  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 6]"      X 360  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 7]"      X 480  Y 360  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 8]"      X 120  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 9]"      X 240  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 10]"     X 360  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 11]"     X 480  Y 600  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 12]"     X 120  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 13]"     X 240  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 14]"     X 360  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 15]"     X 480  Y 840  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 16]"     X 120  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 17]"     X 240  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 18]"     X 360  Y 1080  Width 120  Height 120  ExtendUp 111  END
+        BEGIN "[i 19]"     X 480  Y 1080  Width 120  Height 120  ExtendUp 111  END
+    END
+    BEGIN State      Name Walk1  Orientation Down  Frames [0]  END
+    BEGIN State      Name Walk2  Orientation Down  Frames [1]  END
+    BEGIN State      Name Walk3  Orientation Down  Frames [2]  END
+    BEGIN State      Name Walk4  Orientation Down  Frames [3]  END
+    BEGIN State      Name Walk1  Orientation Up  Frames [4]  END
+    BEGIN State      Name Walk2  Orientation Up  Frames [5]  END
+    BEGIN State      Name Walk3  Orientation Up  Frames [6]  END
+    BEGIN State      Name Walk4  Orientation Up  Frames [7]  END
+    BEGIN State      Name Walk1  Orientation Left|Right  Flip Right  Frames [8]  END
+    BEGIN State      Name Walk2  Orientation Left|Right  Flip Right  Frames [9]  END
+    BEGIN State      Name Walk3  Orientation Left|Right  Flip Right  Frames [10]  END
+    BEGIN State      Name Walk4  Orientation Left|Right  Flip Right  Frames [11]  END
+    BEGIN State      Name Walk1  Orientation DownRight|DownLeft  Flip DownRight  Frames [12]  END
+    BEGIN State      Name Walk2  Orientation DownRight|DownLeft  Flip DownRight  Frames [13]  END
+    BEGIN State      Name Walk3  Orientation DownRight|DownLeft  Flip DownRight  Frames [14]  END
+    BEGIN State      Name Walk4  Orientation DownRight|DownLeft  Flip DownRight  Frames [15]  END
+    BEGIN State      Name Walk1  Orientation UpRight|UpLeft  Flip UpLeft  Frames [16]  END
+    BEGIN State      Name Walk2  Orientation UpRight|UpLeft  Flip UpLeft  Frames [17]  END
+    BEGIN State      Name Walk3  Orientation UpRight|UpLeft  Flip UpLeft  Frames [18]  END
+    BEGIN State      Name Walk4  Orientation UpRight|UpLeft  Flip UpLeft  Frames [19]  END
+END
+
+BEGIN Sprite
+    Name                 WeaponsSpecialistWalkingv1
+    Image                gunner-male-cycle.png
     BEGIN Frames
         Size                 20
         BEGIN "[i 0]"      X 120  Y 120  Width 120  Height 120  ExtendUp 111  END
@@ -4972,5 +5165,18 @@ BEGIN Sprite
     BEGIN State      Name RightDoor  Frames [2]  END
     BEGIN State      Name BayFrame  Frames [3]  END
     BEGIN State      Name BayFloor  Frames [4]  END
+END
+
+BEGIN Sprite     
+    Name                 PowerSwitch  
+    Image                sprite-bank.png  
+    BEGIN Frames     
+        Size                 3  
+        BEGIN "[i 0]"      X 4140  Y 780  Width 120  Height 120 ExtendUp 109  END
+        BEGIN "[i 1]"      X 4320  Y 780  Width 120  Height 120 ExtendUp 109  END
+    END
+    BEGIN State      Name Off  Frames [0]  END
+    BEGIN State      Name On  Frames [1]  END
+    BEGIN State      Name Preview  Frames [1]  END
 END
 

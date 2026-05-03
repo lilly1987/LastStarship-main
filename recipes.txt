@@ -588,6 +588,15 @@ BEGIN Recipe
     Duration            3.0
     BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 6.0 Capacity 6.0 END
     BEGIN Item      Type SlotInput  Index 1 Resource CoilComponent  Quantity 4.0 Capacity 4.0 END
-    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource MotorComponent  Quantity 4.0 Capacity 4.0 END
     BEGIN Item      Type SlotOutput Index 5 Resource FighterBay  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                PowerSwitch
+    Equipment           Assembler
+    Duration            1.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource CoilComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource PowerSwitch  Quantity 1.0 Capacity 1.0 END
 END
