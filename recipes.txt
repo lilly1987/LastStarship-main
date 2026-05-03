@@ -1,0 +1,593 @@
+
+BEGIN Recipe     END
+BEGIN Recipe     
+    Type                 SewageMachine  
+    Duration             0.2
+    BEGIN Item       Type PortInput  Index 1  Resource Sewage  Quantity 12.00000  Capacity 24.00000  END
+    BEGIN Item       Type PortOutput  Index 2  Resource WasteWater  Quantity 8.000000  Capacity 24.00000  END
+    BEGIN Item       Type SlotOutput  Resource Compost  Quantity 1.000000  Capacity 1.000000  END
+END
+BEGIN Recipe     
+    Type                 WaterPurifier  
+    Duration             0.1
+    BEGIN Item       Type PortInput  Index 1  Resource WasteWater  Quantity 6.000000  Capacity 12.00000  END
+    BEGIN Item       Type PortOutput  Index 2  Resource Water  Quantity 4.000000  Capacity 12.00000  END
+END
+BEGIN Recipe     
+    Type                 OxygenMaker  
+    Duration             0.1
+    BEGIN Item       Type PortInput  Index 1  Resource Water  Quantity 5.000000  Capacity 12.00000  END
+    BEGIN Item       Type PortOutput  Index 2  Resource Oxygen  Quantity 5.000000  Capacity 12.00000  END
+END
+BEGIN Recipe     
+    Type                 AirReprocessor  
+    Duration             0.2
+    BEGIN Item       Type PortInput  Index 1  Resource CarbonDioxide  Quantity 6.000000  Capacity 12.00000  END
+    BEGIN Item       Type PortOutput  Index 2  Resource Oxygen  Quantity 4.000000  Capacity 12.00000  END
+END
+BEGIN Recipe     
+    Type                 IceGrinder  
+    Duration             0.2
+    BEGIN Item       Type SlotInput  Resource Ice  Quantity 2.000000  Capacity 10.00000  END
+    BEGIN Item       Type PortOutput  Index 1  Resource WasteWater  Quantity 20.00000  Capacity 40.00000  END
+END
+BEGIN Recipe     Type Refinery  END
+BEGIN Recipe     
+    Type                 MetreonGas  
+    Equipment            Refinery  
+    Duration             0.2
+    BEGIN Item       Type PortInput  Index 1  Resource MetreonGas  Quantity 20.00000  Capacity 40.00000  END
+    BEGIN Item       Type PortOutput  Index 2  Resource RefinedMetreon  Quantity 15.00000  Capacity 30.00000  END
+END
+BEGIN Recipe     
+    Type                 ZeleonGas  
+    Equipment            Refinery  
+    Duration             0.1
+    NeedsUnlocking      false
+    BEGIN Item       Type PortInput  Index 1  Resource ZeleonGas  Quantity 20.00000  Capacity 40.00000  END
+    BEGIN Item       Type PortOutput  Index 2  Resource StableZeleon  Quantity 15.00000  Capacity 30.00000  END
+END
+BEGIN Recipe
+    Type                 HyperspaceIsotopes
+    Equipment            Refinery
+    Duration             0.3
+    BEGIN Item       Type PortInput  Index 1  Resource HyperspaceIsotopes  Quantity 20.00000  Capacity 40.00000  END
+    BEGIN Item       Type PortOutput  Index 2  Resource StableIsotopes  Quantity 15.00000  Capacity 30.00000  END
+END
+BEGIN Recipe     Type ChemicalLab  END
+BEGIN Recipe     
+    Type                 Fuel  
+    Equipment            ChemicalLab  
+    Duration             0.2
+    BEGIN Item       Type PortInput  Index 1  Resource RefinedMetreon  Quantity 10.00000  Capacity 20.00000  END
+    BEGIN Item       Type PortOutput  Index 3  Resource Fuel  Quantity 10.00000  Capacity 30.00000  END
+END
+BEGIN Recipe     
+    Type                 Explosives  
+    Equipment            ChemicalLab  
+    Duration             0.2
+    BEGIN Item       Type PortInput  Index 1  Resource RefinedMetreon  Quantity 5.000000  Capacity 10.00000  END
+    BEGIN Item       Type SlotOutput  Index 1  Resource Explosives  Quantity 1.000000  Capacity 1.000000  END
+END
+BEGIN Recipe     
+    Type                 FTLCharge  
+    Equipment            ChemicalLab  
+    Duration             6.00000
+    BEGIN Item       Type PortInput  Index 1  Resource HyperspaceIsotopes  Quantity 200.0000  Capacity 400.0000  END
+    BEGIN Item       Type SlotInput  Resource RefinedTilium  Quantity 10.000000  Capacity 20.00000  END
+    BEGIN Item       Type SlotOutput  Index 1  Resource FTLCharge  Quantity 1.000000  Capacity 1.000000  END
+END
+BEGIN Recipe
+    Type                 Deuterium
+    Equipment            ChemicalLab
+    Duration             0.5
+    BEGIN Item       Type PortInput  Index 1  Resource StableIsotopes  Quantity 10.0000  Capacity 20.0000  END
+    BEGIN Item       Type PortOutput  Index 3  Resource Deuterium  Quantity 20.000000  Capacity 40.000000  END
+END
+BEGIN Recipe
+    Type                StargateResin
+    Equipment           ChemicalLab
+    Duration            0.5
+    NeedsUnlocking      false
+    BEGIN Item       Type PortInput  Index 1  Resource RefinedMetreon  Quantity 5.000000  Capacity 10.00000  END
+    BEGIN Item       Type SlotOutput  Index 1  Resource StargateResin  Quantity 1.000000  Capacity 1.000000  END
+END
+BEGIN Recipe
+    Type                QuantumProcessorComponent
+    Equipment           ChemicalLab
+    Duration            0.5
+    NeedsUnlocking      false
+    BEGIN Item       Type SlotInput  Resource QuantumWaferComponent  Quantity 1.0  Capacity 2.0 END
+    BEGIN Item       Type PortInput  Index 1  Resource RefinedMetreon  Quantity 100.000000  Capacity 1000.00000  END
+    BEGIN Item       Type SlotOutput  Index 1  Resource QuantumProcessorComponent  Quantity 1.000000  Capacity 1.000000  END
+END
+BEGIN Recipe
+    Type                ShieldedZeleonCanister
+    Equipment           ChemicalLab
+    Duration            0.2
+    NeedsUnlocking      false
+    BEGIN Item      Type PortInput  Index 1  Resource StableZeleon  Quantity 15.0  Capacity 60.0  END
+    BEGIN Item      Type SlotInput  Resource ShieldedCanisterComponent  Quantity 2.0  Capacity 12.0  END
+    BEGIN Item      Type SlotOutput Index 1  Resource ShieldedZeleonCanister  Quantity 2.0 Capacity 8.0  END
+END
+BEGIN Recipe     Type MunitionsFactory  END
+BEGIN Recipe     
+    Type                 RailgunShell  
+    Equipment            MunitionsFactory  
+    Duration             0.5000000  
+    BEGIN Item       Type SlotInput  Resource MetalIngot  Quantity 2.000000  Capacity 4.000000  END
+    BEGIN Item       Type SlotOutput  Index 2  Resource RailgunShell  Quantity 1.000000  Capacity 1.000000  END
+END
+BEGIN Recipe     
+    Type                 CannonShell  
+    Equipment            MunitionsFactory  
+    Duration             0.5000000  
+    BEGIN Item       Type SlotInput  Resource MetalIngot  Quantity 1.000000  Capacity 2.000000  END
+    BEGIN Item       Type SlotInput  Index 1  Resource Explosives  Quantity 1.000000  Capacity 2.000000  END
+    BEGIN Item       Type SlotOutput  Index 2  Resource CannonShell  Quantity 1.000000  Capacity 1.000000  END
+END
+BEGIN Recipe     
+    Type                 Bullets  
+    Equipment            MunitionsFactory  
+    Duration             0.2000000  
+    BEGIN Item       Type SlotInput  Resource MetalIngot  Quantity 1.000000  Capacity 2.000000  END
+    BEGIN Item       Type SlotInput  Index 1  Resource Explosives  Quantity 1.000000  Capacity 2.000000  END
+    BEGIN Item       Type SlotOutput  Index 2  Resource Bullets  Quantity 50.00000  Capacity 50.00000  END
+END
+BEGIN Recipe
+    Type                Fabricator
+END
+BEGIN Recipe
+    Type                FrameComponent
+    Equipment           Fabricator
+    Duration            1.0
+    BEGIN Item      Type SlotInput  Index 0  Resource MetalIngot  Quantity 5.0  Capacity 10.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource FrameComponent  Quantity 1.0  Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                MotorComponent
+    Equipment           Fabricator
+    Duration            1.5
+    BEGIN Item      Type SlotInput  Index 0  Resource MetalIngot  Quantity 2.0  Capacity 4.0 END
+    BEGIN Item      Type SlotInput  Index 1  Resource CopperIngot  Quantity 2.0  Capacity 4.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource MotorComponent  Quantity 1.0  Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                CoilComponent
+    Equipment           Fabricator
+    Duration            1.5
+    BEGIN Item      Type SlotInput  Index 0  Resource MetalIngot  Quantity 2.0  Capacity 4.0 END
+    BEGIN Item      Type SlotInput  Index 1  Resource CopperIngot  Quantity 2.0  Capacity 4.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource CoilComponent  Quantity 1.0  Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                LensComponent
+    Equipment           Fabricator
+    Duration            1.5
+    BEGIN Item      Type SlotInput  Index 0  Resource PreciousMetals  Quantity 2.0  Capacity 4.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource LensComponent  Quantity 1.0  Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                ProcessorComponent
+    Equipment           Fabricator
+    Duration            3.0
+    BEGIN Item      Type SlotInput  Index 0  Resource PreciousMetals  Quantity 3.0  Capacity 6.0 END
+    BEGIN Item      Type SlotInput  Index 1  Resource CopperIngot  Quantity 3.0  Capacity 6.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource ProcessorComponent  Quantity 1.0  Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                QuantumWaferComponent
+    Equipment           Fabricator
+    Duration            0.5
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0  Resource PreciousMetals  Quantity 2.0  Capacity 4.0 END
+    BEGIN Item      Type SlotInput  Index 1  Resource RefinedTilium  Quantity 2.0  Capacity 4.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource QuantumWaferComponent  Quantity 1.0  Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                EmptyComputeGridComponent
+    Equipment           Fabricator
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0  Resource CopperIngot  Quantity 5.0  Capacity 10.0 END
+    BEGIN Item      Type SlotInput  Index 1  Resource RefinedTilium  Quantity 5.0  Capacity 10.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource EmptyComputeGridComponent  Quantity 1.0  Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                ShieldedCanisterComponent
+    Equipment           Fabricator
+    Duration            0.3
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0  Resource PreciousMetals  Quantity 1.0  Capacity 4.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource ShieldedCanisterComponent  Quantity 3.0  Capacity 12.0 END
+END
+BEGIN Recipe
+    Type                EnergyCellFrameComponent
+    Equipment           Fabricator
+    Duration            0.4
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0  Resource NeubidiumIngot  Quantity 1.0  Capacity 10.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource EnergyCellFrameComponent  Quantity 1.0  Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                EmptyCrystalComponent
+    Equipment           Fabricator
+    Duration            1.50
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0  Resource NeubidiumIngot  Quantity 5.0  Capacity 10.0 END
+    BEGIN Item      Type SlotInput  Index 1  Resource PreciousMetals  Quantity 5.0  Capacity 10.0 END
+    BEGIN Item      Type SlotOutput  Index 2  Resource EmptyCrystalComponent  Quantity 1.0  Capacity 1.0 END 
+END
+BEGIN Recipe
+    Type                Assembler
+END
+BEGIN Recipe
+    Type                TinyTank
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource TinyTank  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                SmallTank
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource SmallTank  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Tank
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 6.0 Capacity 6.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Tank  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Stairs
+    Equipment           Assembler
+    Duration            2.0
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Stairs  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Door
+    Equipment           Assembler
+    Duration            3.0
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Door  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Loader
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Loader  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Track
+    Equipment           Assembler
+    Duration            0.3
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Track  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                RobotArm
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                RobotArmShort
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource RobotArmShort  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                RobotArmSmart
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource LensComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource RobotArmSmart  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Battery
+    Equipment           Assembler
+    Duration            3.0
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 3.0 Capacity 3.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource CoilComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource PreciousMetals  Quantity 1.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Battery  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                SolarPanel
+    Equipment           Assembler
+    Duration            3.0
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource PreciousMetals  Quantity 1.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource CopperIngot  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource SolarPanel  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                QuantumComputeGridComponent
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource EmptyComputeGridComponent Quantity 1.0 Capacity 1.0  END
+    BEGIN Item      Type SlotInput  Index 1 Resource QuantumProcessorComponent  Quantity 4.0 Capacity 4.0  END
+    BEGIN Item      Type SlotOutput Index 5 Resource QuantumComputeGridComponent  Quantity 1.0 Capacity 1.0  END
+END
+BEGIN Recipe
+    Type                WarpAlignmentComputer
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0  Resource QuantumComputeGridComponent  Quantity 1.0  Capacity 1.0  END
+    BEGIN Item      Type SlotInput  Index 1  Resource StargateReceiver  Quantity 1.0  Capacity 1.0  END
+    BEGIN Item      Type SlotInput  Index 2  Resource NeubidiumCapacitor  Quantity 1.0  Capacity 1.0  END
+    BEGIN Item      Type SlotOutput Index 5  Resource WarpAlignmentComputer  Quantity 1.0  Capacity 1.0  END
+END
+BEGIN Recipe
+    Type                StargateStructure
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource StargateStructure  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                StargateActuator
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource StargateStructure  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource StargateActuator  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                StargateReceiver
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource CoilComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource LensComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource StargateReceiver Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                StargateCapacitor
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource CoilComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource StargateActuator  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type PortInput  Index 1 Resource StableIsotopes  Quantity 25.0 Capacity 100.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource StargateCapacitor Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                NeubidiumCapacitor
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput Index 0 Resource StargateCapacitor Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput Index 1 Resource NeubidiumIngot Quantity 5.0 Capacity 10.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource NeubidiumCapacitor Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                ZeleonEnergyCell
+    Equipment           Assembler
+    Duration            0.4
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput Index 0 Resource EnergyCellFrameComponent Quantity 1.0 Capacity 4.0 END
+    BEGIN Item      Type SlotInput Index 1 Resource ShieldedZeleonCanister Quantity 2.0 Capacity 8.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource ZeleonEnergyCell Quantity 1.0 Capacity 10.0 END
+END
+BEGIN Recipe
+    Type                EnergyTransmitter
+    Equipment           Assembler
+    Duration            6.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 10.0 Capacity 10.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource CoilComponent  Quantity 10.0 Capacity 10.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource MotorComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotInput  Index 3 Resource LensComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource EnergyTransmitter  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                LaserInfuser
+    Equipment           Assembler
+    Duration            6.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource NeubidiumCapacitor  Quantity 10.0 Capacity 10.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource CoilComponent  Quantity 10.0 Capacity 10.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource ProcessorComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotInput  Index 3 Resource LensComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource LaserInfuser  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                RadiationBlocker
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource RadiationBlocker  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                LogisticsDrone
+    Equipment           Assembler
+    Duration            6.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource CoilComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 3 Resource LensComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 4 Resource ProcessorComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource LogisticsDrone Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Deflector
+    Equipment           Assembler
+    Duration            6.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 6.0 Capacity 6.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource CoilComponent  Quantity 6.0 Capacity 6.0 END
+    BEGIN Item      Type SlotInput  Index 3 Resource LensComponent  Quantity 6.0 Capacity 6.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Deflector Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                SmallStorageCrate
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource SmallStorageCrate  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                StorageCrate
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 6.0 Capacity 6.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource StorageCrate  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Hydroponics
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 6.0 Capacity 6.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource CoilComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Hydroponics  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                LaserInfuser
+END
+BEGIN Recipe
+    Type                ChargedCrystal
+    Equipment           LaserInfuser
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource EmptyCrystalComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource ZeleonEnergyCell  Quantity 5.0 Capacity 8.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource ChargedCrystal  Quantity 1.0 Capacity 1.0 END
+END
+
+BEGIN Recipe
+    Type                LightningRod
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 3.0 Capacity 3.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource CoilComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource LightningRod Quantity 1.0 Capacity 1.0 END
+END
+
+BEGIN Recipe
+    Type                HyperspaceSensorLR
+    Equipment           Assembler
+    Duration            6.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource CoilComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource LensComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource ProcessorComponent  Quantity 3.0 Capacity 3.0 END
+    BEGIN Item      Type SlotInput  Index 3 Resource FrameComponent  Quantity 3.0 Capacity 3.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource HyperspaceSensorLR Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Airduct
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Airduct  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Scrubber
+    Equipment           Assembler
+    Duration            2.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Scrubber  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                AirReprocessor
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 3.0 Capacity 3.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource CoilComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource AirReprocessor  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                OxygenMaker
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource CoilComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource OxygenMaker  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                SewagePipe
+    Equipment           Assembler
+    Duration            1.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource SewagePipe  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                SewageMachine
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 3.0 Capacity 3.0 END
+    BEGIN Item      Type SlotInput  Index 2 Resource CoilComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource SewageMachine  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                WaterPurifier
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource WaterPurifier  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                IceGrinder
+    Equipment           Assembler
+    Duration            3.0
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 2.0 Capacity 2.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource IceGrinder  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                FighterBay
+    Equipment           Assembler
+    Duration            3.0
+    BEGIN Item      Type SlotInput  Index 0 Resource FrameComponent  Quantity 6.0 Capacity 6.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource CoilComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotInput  Index 1 Resource MotorComponent  Quantity 4.0 Capacity 4.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource FighterBay  Quantity 1.0 Capacity 1.0 END
+END
