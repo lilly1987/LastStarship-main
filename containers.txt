@@ -16,7 +16,7 @@ BEGIN Container
 END
 BEGIN Container  
     Type                 FTLCharge  
-    Capacity             10  
+    Capacity             1
     LootSpawn            true
     BEGIN Colour     R 143  G 204  B 62  A 255  END
 END

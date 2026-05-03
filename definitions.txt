@@ -5,8 +5,8 @@ END
 
 BEGIN Definition
     Type Battery
-    BEGIN Equipment Width 1 Height 1 Rotatable True  NonBlocking True END
-    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Equipment Width 2 Height 3 Rotatable True  NonBlocking True  END
+    BEGIN Port Type Power X 1 Y 2 END
 
 END
 
@@ -127,7 +127,7 @@ END
 BEGIN Definition
     Type SpaceSuitPod
     BEGIN Equipment Width 1 Height 1  NonBlocking True END
-    BEGIN Port Type Atmosphere X 0 Y 0 Resource Oxygen Flow In END
+    BEGIN Port Type Pipes X 0 Y 0 Resource Oxygen Flow In END
     BEGIN Slot X 0 Y 0 END
 
 END
@@ -142,21 +142,24 @@ END
 
 BEGIN Definition
     Type GatlingGun
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
 END
 
 BEGIN Definition
     Type Railgun
-    BEGIN Equipment Width 1 Height 1 Rotatable True Charge 100 Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Charge 100 Powered True Crewed false NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Station X 0 Y 0 END
 END
 
 BEGIN Definition
     Type Cannon
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True Crewed false NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Station X 0 Y 0 END
 END
@@ -170,7 +173,8 @@ END
 
 BEGIN Definition
     Type Deflector
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
 END
 
 BEGIN Definition
