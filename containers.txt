@@ -22,19 +22,19 @@ BEGIN Container
 END
 BEGIN Container  
     Type                 Bullets  
-    Capacity             3000  
-    LootSpawn            true
-    BEGIN Colour     R 246  G 124  B 57  A 255  END
-END
-BEGIN Container  
-    Type                 RailgunShell  
     Capacity             100  
     LootSpawn            true
     BEGIN Colour     R 246  G 124  B 57  A 255  END
 END
 BEGIN Container  
-    Type                 CannonShell  
+    Type                 RailgunShell  
     Capacity             50  
+    LootSpawn            true
+    BEGIN Colour     R 246  G 124  B 57  A 255  END
+END
+BEGIN Container  
+    Type                 CannonShell  
+    Capacity             25  
     LootSpawn            true
     BEGIN Colour     R 246  G 124  B 57  A 255  END
 END

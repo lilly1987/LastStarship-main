@@ -6,7 +6,7 @@ END
 BEGIN Definition
     Type Battery
     BEGIN Equipment Width 2 Height 3 Rotatable True  NonBlocking True  END
-    BEGIN Port Type Power X 1 Y 2 END
+    BEGIN Port Type Power X 0 Y 0 END
 
 END
 
@@ -64,7 +64,13 @@ END
 
 BEGIN Definition
     Type LaserInfuser
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False Factory True EmitsRadiation True  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True Factory True EmitsRadiation false  NonBlocking True END
+    BEGIN Port Type Power      X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Station X 0 Y 0 END
 END
@@ -153,7 +159,6 @@ BEGIN Definition
     BEGIN Equipment Width 1 Height 1 Rotatable True Charge 100 Powered True Crewed false NonBlocking True END
     BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
-    BEGIN Station X 0 Y 0 END
 END
 
 BEGIN Definition
@@ -161,7 +166,6 @@ BEGIN Definition
     BEGIN Equipment Width 1 Height 1 Rotatable True Powered True Crewed false NonBlocking True END
     BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
-    BEGIN Station X 0 Y 0 END
 END
 
 BEGIN Definition
@@ -198,30 +202,10 @@ END
 BEGIN Definition
     Type DockingPort
     BEGIN Equipment Width 6 Height 2 Rotatable True  NonBlocking True END
-    BEGIN Slot X 0 Y 1 END
     BEGIN Slot X 1 Y 1 END
     BEGIN Slot X 2 Y 1 END
     BEGIN Slot X 3 Y 1 END
     BEGIN Slot X 4 Y 1 END
-    BEGIN Slot X 5 Y 1 END
-    BEGIN Slot X 0 Y 0 END
-    BEGIN Slot X 1 Y 0 END
-    BEGIN Slot X 2 Y 0 END
-    BEGIN Slot X 3 Y 0 END
-    BEGIN Slot X 4 Y 0 END
-    BEGIN Slot X 5 Y 0 END
-    BEGIN Slot X 0 Y 2 END
-    BEGIN Slot X 1 Y 2 END
-    BEGIN Slot X 2 Y 2 END
-    BEGIN Slot X 3 Y 2 END
-    BEGIN Slot X 4 Y 2 END
-    BEGIN Slot X 5 Y 2 END
-    BEGIN Slot X 0 Y 3 END
-    BEGIN Slot X 1 Y 3 END
-    BEGIN Slot X 2 Y 3 END
-    BEGIN Slot X 3 Y 3 END
-    BEGIN Slot X 4 Y 3 END
-    BEGIN Slot X 5 Y 3 END
 END
 
 BEGIN Definition
@@ -330,7 +314,7 @@ END
 
 BEGIN Definition
     Type GasCollector
-    BEGIN Equipment Width 1 Height 1 WidthOnTop 1 HeightOnTop 1 Powered True NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Powered True NonBlocking True END
     BEGIN Port Type Pipes X 0 Y 0 Resource MetreonGas Flow Out END
     BEGIN Port Type Power X 0 Y 0 END
 
@@ -354,13 +338,15 @@ END
 
 BEGIN Definition
     Type ChemicalLab
-    BEGIN Equipment Width 3 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True Factory True  NonBlocking True END
     BEGIN Port Type Power X 0 Y 0 END
     BEGIN Port Type Pipes X 0 Y 0 END
-    BEGIN Port Type Pipes X 1 Y 0 END
-    BEGIN Port Type Pipes X 2 Y 0 END
-    BEGIN Slot X 1 Y 0 END
-    BEGIN Slot X 2 Y 0 END
+    BEGIN Port Type Pipes X 0 Y 0 END
+    BEGIN Port Type Pipes X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
 
 END
 
@@ -371,7 +357,7 @@ BEGIN Definition
     BEGIN Slot X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
-    BEGIN Station X 0 Y 0 END
+    BEGIN Slot X 0 Y 0 END
 END
 
 BEGIN Definition
@@ -394,7 +380,6 @@ BEGIN Definition
     BEGIN Slot X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
-    BEGIN Station X 0 Y 0 END
 END
 
 BEGIN Definition
@@ -459,7 +444,6 @@ BEGIN Definition
     BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
     BEGIN Port Type Power X 0 Y 0 END
     BEGIN Slot X 0 Y 0 END
-    BEGIN Station X 0 Y 0 END
 END
 
 BEGIN Definition 
@@ -470,7 +454,7 @@ END
 
 BEGIN Definition
     Type EnergyTransmitter
-    BEGIN Equipment Width 1 Height 1 Rotatable True Powered False  NonBlocking True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
     BEGIN Port Type Power X 0 Y 0 END
     BEGIN Station X 0 Y 0 END
 END
@@ -529,7 +513,7 @@ END
 
 BEGIN Definition
     Type FighterBay
-    BEGIN Equipment Width 1 Height 1 WidthOnTop 1 HeightOnTop 1 XOffsetOnTop 0 YOffsetOnTop 0 Rotatable True Powered True NonBlocking True Factory True Crewed True END
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True Crewed True NonBlocking True Factory True END
     BEGIN Port Type Power X 0 Y 0 END
     BEGIN Port Type Pipes X 0 Y 0 Resource Fuel Flow In END
     BEGIN Slot X 0 Y 0 END
