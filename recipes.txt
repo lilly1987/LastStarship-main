@@ -92,7 +92,7 @@ BEGIN Recipe
     Type                 Explosives  
     Equipment            ChemicalLab  
     Duration 0.1
-    BEGIN Item       Type SlotOutput  Index 1  Resource Explosives  Quantity 1.000000  Capacity 1.000000  END
+    BEGIN Item       Type SlotOutput  Index 1  Resource Explosives  Quantity 300.000000  Capacity 600.000000  END
 END
 BEGIN Recipe     
     Type                 FTLCharge  
@@ -250,6 +250,78 @@ BEGIN Recipe
 END
 BEGIN Recipe
     Type                Assembler
+END
+BEGIN Recipe
+    Type                ChemicalLab
+    Equipment           Assembler
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 4 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                GasCollector
+    Equipment           Assembler
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 4 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                MunitionsFactory
+    Equipment           Assembler
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 4 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Cannon
+    Equipment           Assembler
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 4 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                GatlingGun
+    Equipment           Assembler
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 4 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Railgun
+    Equipment           Assembler
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Railgun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Railgun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Railgun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Railgun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 4 Resource Railgun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 5 Resource Railgun  Quantity 1.0 Capacity 1.0 END
 END
 BEGIN Recipe
     Type                Reactor
